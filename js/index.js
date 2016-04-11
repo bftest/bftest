@@ -17,31 +17,50 @@ $(function(){
         $(this).hasClass("checked") ? $(this).removeClass("checked").siblings("input").removeAttr("checked","false") :  $(this).addClass("checked").siblings("input").attr("checked","checked");
     });
     //
-    $(".carT span").on("click",function(){
+    var $carTSpan=$(".carT span");
+    $carTSpan.each(function(index){
+        new FastClick($carTSpan[index]);
+        $(this).on("click",function(){
+            $(this).hasClass("selected") ? $(this).removeClass("selected").parent().siblings().hide():($(this).is("[id]") ? $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().show().children("input").focus(): $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().hide());
+        })
+    });
+ /*   $(".carT span").on("click",function(){
         if($(this).hasClass("selected")){
             $(this).removeClass("selected").parent().siblings().hide();
         }else{
             $(this).is("[id]") ? $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().show(): $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().hide();
         }
-    });
+    });*/
     //
     function buyNum(){
-        $(".increment").on("click",function(){
-            var $num=parseInt($("#buy-num").val());
-            $num++;
-            $("#buy-num").val($num);
-        });
-        $(".decrement").on("click",function(){
-            var $num=parseInt($("#buy-num").val());
-            $num<=0 ? $num=0 : $num--;
-            $("#buy-num").val($num);
-        });
+        var $increment= $(".increment");
+        var $decrement= $(".decrement");
+        var $buyNum=$("#buy-num");
+        $increment.each(function(){
+            new FastClick($increment[0]);
+           $(this).on("click",function(){
+                var $num=parseInt($("#buy-num").val());
+                $num++;
+                $("#buy-num").val($num);
+            });
+        })
+        $decrement.each(function(){
+            new FastClick($decrement[0]);
+            $(this).on("click",function(){
+                var $num=parseInt($("#buy-num").val());
+                $num<=0 ? $num=0 : $num--;
+                $("#buy-num").val($num);
+            });
+        })
+        $buyNum.each(function(){
+            new FastClick($buyNum[0]);
+            $(this).on("click",function(){
+                $(this).focus();
+            });
+        })
     }
     buyNum();
     //
-  /*  $(".tagBox dl li").on("click", function() {
-        $(this).hasClass("disable") ? $(this).removeClass("selected") : $(this).addClass("selected").siblings().removeClass("selected");
-    });*/
     var $tagBli = $(".tagBox dl li");
     $tagBli.each(function(index){
         new FastClick($tagBli[index]);
@@ -58,19 +77,32 @@ $(function(){
     $(".closed .close").on("click",function(){
         $(".tagLayer").hide();
     });
-});
-////////////////////////
-$(function() {
-    $(".manageAd li .befTar").on("click",function(){
-        if($(this).hasClass("selected")){
-            $(this).removeClass("selected");
-        }else{
-            $(this).addClass("selected");
-            $(this).parent().siblings().children(".befTar").removeClass("selected");
-        }
+    //
+    var $befTar=$(".manageAd li .befTar");
+    $befTar.each(function(index){
+        new FastClick($befTar[index]);
+        $(this).on("click",function(){
+            $(this).hasClass("selected") ?  $(this).parent().siblings().children(".befTar").removeClass("selected") : $(this).addClass("selected").parent().siblings().children(".befTar").removeClass("selected");
+        });
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
-/////////
+
+
 
 
 
