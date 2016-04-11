@@ -39,8 +39,15 @@ $(function(){
     }
     buyNum();
     //
-    $(".tagBox dl li").on("click", function() {
+  /*  $(".tagBox dl li").on("click", function() {
         $(this).hasClass("disable") ? $(this).removeClass("selected") : $(this).addClass("selected").siblings().removeClass("selected");
+    });*/
+    var $tagBli = $(".tagBox dl li");
+    $tagBli.each(function(index){
+        new FastClick($tagBli[index]);
+        $(this).on("click",function(){
+            $(this).hasClass("disable") ? $(this).removeClass("selected") : $(this).addClass("selected").siblings().removeClass("selected");
+        })
     });
     $(".selectedTag").on("click",function(){
         $(".tagLayer").show();
