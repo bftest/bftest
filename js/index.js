@@ -54,11 +54,20 @@ $(function(){
     //
     $(".tagBox dl li").click(function(){
         $(this).hasClass("disable") ? $(this).removeClass("selected") : $(this).addClass("selected").siblings().removeClass("selected");
-    });
+     });
+
+    /*var $tagBoxLi=$(".tagBox dl li");
+    FastClick.attach($tagBoxLi);
+    $tagBoxLi.click(function(){
+        $(this).hasClass("disable") ? $(this).removeClass("selected") : $(this).addClass("selected").siblings().removeClass("selected");
+    });*/
     $(".selectedTag").click(function(){
         $(".tagLayer").show();
     });
     $("#btnSure").click(function(){
+        $(".tagLayer").hide();
+    });
+    $(".closed .close").click(function(){
         $(".tagLayer").hide();
     });
 });
