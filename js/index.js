@@ -5,46 +5,33 @@ document.documentElement.style.fontSize = winW/proportion +"px";
 if(winW>desW){
     document.documentElement.style.fontSize = "100px";
 }
-
 /////
 $(function(){
-
     //login
-    $(function(){
-        $(".inputIn>li").children("input").click(function(){
-            $(this).parent().children("span").show();
-            $(this).parent().siblings().children("span").hide();
-        });
+    $(".inputIn>li").children("input").on("click",function(){
+        $(this).parent().children("span").show();
+        $(this).parent().siblings().children("span").hide();
     });
     ///
-    $(".checkChange").click(function(){
-        if($(this).hasClass("checked")){
-            $(this).removeClass("checked").siblings("input").removeAttr("checked","false");
-        }else{
-            $(this).addClass("checked").siblings("input").attr("checked","checked");
-        }
+    $(".checkChange").on("click",function(){
+        $(this).hasClass("checked") ? $(this).removeClass("checked").siblings("input").removeAttr("checked","false") :  $(this).addClass("checked").siblings("input").attr("checked","checked");
     });
-////
-
-    $(".carT span").click(function(){
+    //
+    $(".carT span").on("click",function(){
         if($(this).hasClass("selected")){
             $(this).removeClass("selected").parent().siblings().hide();
         }else{
-            if($(this).is("[id]")){
-                $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().show();
-            }else{
-                $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().hide();
-            }
+            $(this).is("[id]") ? $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().show(): $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().hide();
         }
     });
-//
+    //
     function buyNum(){
-        $(".increment").click(function(){
+        $(".increment").on("click",function(){
             var $num=parseInt($("#buy-num").val());
             $num++;
             $("#buy-num").val($num);
         });
-        $(".decrement").click(function(){
+        $(".decrement").on("click",function(){
             var $num=parseInt($("#buy-num").val());
             $num<=0 ? $num=0 : $num--;
             $("#buy-num").val($num);
@@ -52,35 +39,29 @@ $(function(){
     }
     buyNum();
     //
-    $(".tagBox dl li").click(function(){
+    $(".tagBox dl li").on("click", function() {
         $(this).hasClass("disable") ? $(this).removeClass("selected") : $(this).addClass("selected").siblings().removeClass("selected");
-     });
-
-    /*var $tagBoxLi=$(".tagBox dl li");
-    FastClick.attach($tagBoxLi);
-    $tagBoxLi.click(function(){
-        $(this).hasClass("disable") ? $(this).removeClass("selected") : $(this).addClass("selected").siblings().removeClass("selected");
-    });*/
-    $(".selectedTag").click(function(){
+    });
+    $(".selectedTag").on("click",function(){
         $(".tagLayer").show();
     });
     $("#btnSure").click(function(){
         $(".tagLayer").hide();
     });
-    $(".closed .close").click(function(){
+    $(".closed .close").on("click",function(){
         $(".tagLayer").hide();
     });
 });
 ////////////////////////
 $(function() {
-    $(".manageAd li .befTar").click(function(){
+    $(".manageAd li .befTar").on("click",function(){
         if($(this).hasClass("selected")){
             $(this).removeClass("selected");
         }else{
             $(this).addClass("selected");
-           $(this).parent().siblings().children(".befTar").removeClass("selected");
+            $(this).parent().siblings().children(".befTar").removeClass("selected");
         }
-   });
+    });
 });
 /////////
 
