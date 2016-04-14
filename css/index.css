@@ -32,6 +32,9 @@ html,body{
 }
 .content{
   padding-bottom: 1.3rem;
+    padding-bottom: 1.3rem;
+    position: relative;
+    z-index: 1;
 }
 .main{
     width: 90%;
@@ -501,6 +504,7 @@ h3{
     left: 0;
     background-color: #e73d4d;
     border-top: 1px solid #dfdfdf;
+    z-index: 9999;
 }
 .pay a{
     width: 50%;
