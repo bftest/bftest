@@ -35,11 +35,61 @@
     margin-bottom: .3rem;
     margin-top: -1px;
 }
-.goodsChange li img{
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
+/*商品详情页样式*/
+#outer{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin-bottom: .5rem;
 }
+#inner {
+    width: 500%;
+    height: 200px;
+    list-style: none;
+    overflow: hidden;
+}
+#inner li{
+    float: left;
+    width:20%;
+    height: 200px;
+    overflow: hidden;
+}
+#inner li img{
+    width: 50%;
+    display: block;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+#item{
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    text-align: center;
+}
+#item li{
+    display: inline-block;
+    width: 10px;
+    height:10px;
+    border-radius: 50%;
+    background: #b2b2b2;
+    color: #fff;
+    margin: 0 5px;
+    text-align: center;
+}
+#item li.cur{
+    background: #333;
+}
+
+
+
+
+
+
+
+
+
+
+/**/
 .goodsInfo h3,.goodsInfo p{
     font-size: .36rem;
     padding: 0rem .3rem;
@@ -457,3 +507,4 @@
     display: block;
     margin: 0 auto;
 }
+

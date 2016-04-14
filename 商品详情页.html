@@ -30,21 +30,15 @@
 <!--goodsChange-->
 <section class="goodsChange">
     <!---->
-    <div class="choose_tasks goodsChangeImg">
-        <div class="swiper-container" style="cursor: -webkit-grab;">
-            <ul class="swiper-wrapper">
-                <li class="swiper-slide swiper-slide1">
-                    <a href="#"><img src="images/product.png"></a>
-                </li>
-                <li class="swiper-slide swiper-slide1">
-                    <a href="#"><img src="images/product.png"></a>
-                </li>
-                <li class="swiper-slide swiper-slide1 swiper-slide-visible swiper-slide-active">
-                    <a href="#"><img src="images/product.png"></a>
-                </li>
-            </ul>
-            <div class="pagination"><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span></div>
-        </div>
+    <div id="outer">
+        <ul id="inner">
+            <li><img src="images/pp.png"/></li>
+            <li><img src="images/pp2.png"/></li>
+            <li><img src="images/product.png"/></li>
+            <li><img src="images/pp2.png"/></li>
+            <li><img src="images/product.png"/></li>
+        </ul>
+        <ul id="item"></ul>
     </div>
     <!---->
     <div class="goodsInfo">
@@ -193,7 +187,7 @@
                 </dd>
             </dl>
             <dl>
-                <dt>选择套餐</dt>
+                <dt>选择数量</dt>
                 <dd>
                     <div class="quantity-form">
                         <span class="decrement">－</span>
@@ -208,24 +202,6 @@
     </div>
 </div>
 <!--tagLayer end-->
-<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
-<script type="text/javascript">
-    //swiper轮播插件初始化
-    $(document).ready(function(){
-        var mySwiper = new Swiper('.swiper-container',{
-            pagination: '.pagination',
-            loop:true,
-            grabCursor: true,
-            paginationClickable: true,
-            autoplay:3000,
-            autoplayDisableOnInteraction:false,
-            calculateHeight:true
-        });
-
-        $(".swiper-wrapper div").each(function(){
-            $(this).css("display","block");
-        });
-    });
-</script>
+<script src="js/touch.js"></script>
 </body>
 </html>
