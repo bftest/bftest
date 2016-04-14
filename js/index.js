@@ -88,7 +88,7 @@ $(function(){
 
 //回到页面顶部
     $("#returnTop").click(function(){
-        $('body,html').animate({scrollTop:0},1500); //点击按钮让其回到页面顶部
+        $('body,html').animate({scrollTop:0},1000); //点击按钮让其回到页面顶部
     });
     $(window).scroll(function() {
         var $scrollTop=$(document).scrollTop(); //滚动条距顶端的距离
