@@ -1995,7 +1995,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 this.search.val(this.focusser.val());
             }
             if (this.opts.shouldFocusInput(this)) {
-                //this.search.focus();
+                this.search.focus();
                 // move the cursor to the end after focussing, otherwise it will be at the beginning and
                 // new text will appear *before* focusser.val()
                 el = this.search.get(0);
