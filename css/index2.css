@@ -36,32 +36,36 @@
     margin-top: -1px;
 }
 /*商品详情页样式*/
-.goodsChangeImgs .choose_tasks .swiper-container{
+/*.goodsChangeImg .choose_tasks .swiper-container{
     margin-bottom: .3rem;
 }
-.goodsChangeImgs .swiper-container{
+.goodsChangeImg .swiper-container{
     overflow: visible;
-}
-.goodsChangeImgs .swiper-slide img{
+}*/
+.goodsChangeImg .swiper-slide img{
     width: 50%;
     margin: 0 auto;
     display: block;
     min-width: 50%;
     max-width: 50%;
 }
-.goodsChangeImgs .swiper-pagination-switch {
+
+.goodsChangeImg .swiper-pagination-switch {
     background: #b2b2b2;
     opacity: 1;
     filter: alpha(opacity=100);
 }
-.goodsChangeImgs .swiper-active-switch {
+.goodsChangeImg .swiper-active-switch {
     background: #333;
 }
-.goodsChangeImgs  .pagination{
-    bottom: -10px;
+.goodsChangeImg  .pagination{
+    bottom: 0px;
 }
 .goodsInfoC{
     margin-top: .5rem;
+}
+.goodsChangeImg  .swiper-container{
+    height: 220px;
 }
     /**/
 .goodsInfo h3,.goodsInfo p{
