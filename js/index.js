@@ -94,10 +94,10 @@ $(function(){
         var $scrollTop=$(document).scrollTop(); //滚动条距顶端的距离
         var $viewHeight= $(window).height();//浏览器可视化窗口的大小
         var top=parseInt($scrollTop)+parseInt($viewHeight)-217;
-        if($scrollTop>$viewHeight-217){
-            $("#returnTop").show(300);
+        if($scrollTop>$viewHeight-300){
+            $("#returnTop").show(100);
         }else{
-            $("#returnTop").hide(300);
+            $("#returnTop").hide(100);
         }
     })
 
