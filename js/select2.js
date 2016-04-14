@@ -742,10 +742,10 @@ the specific language governing permissions and limitations under the Apache Lic
 
             this.dropdown.addClass(evaluate(opts.dropdownCssClass, this.opts.element));
             this.dropdown.data("select2", this);
-            this.dropdown.on("click", killEvent);
+           this.dropdown.on("click", killEvent);
 
             this.results = results = this.container.find(resultsSelector);
-            this.search = search = this.container.find("input.select2-input");
+           this.search = search = this.container.find("input.select2-input");
 
             this.queryCount = 0;
             this.resultsPage = 0;
@@ -804,6 +804,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 if ($(e.target).closest(".select2-result-selectable").length > 0) {
                     this.highlightUnderEvent(e);
                     this.selectHighlighted(e);
+                    $("input").blur();
                 }
             }));
 
@@ -2694,7 +2695,6 @@ the specific language governing permissions and limitations under the Apache Lic
                 _this.search[0].focus();
                 _this.selectChoice($(this));
             });
-
             // rewrite labels from original element to focusser
             this.search.attr("id", "s2id_autogen"+nextUid());
 
