@@ -81,7 +81,7 @@
         <h3>使用优惠券</h3>
         <section class="cardBox">
             <div class="carExtr Discount">
-                <input type="text" placeholder="请填写已有优惠码"/>
+                <input type="text" id="textC" placeholder="请填写已有优惠码"/>
                 <input type="button" value="确定" class="button"/>
             </div>
         </section>
@@ -121,10 +121,10 @@
 </section>
 <!--pay end-->
 <script>
-    $("#testIn").focus(function(){
+    $("#testIn,#textC").focus(function(){
         $(".pay").css({"position":"static"});
     });
-    $("#testIn").onblur(function(){
+    $("#testIn,#textC").blur(function(){
         $(".pay").css({"position":"fixed"});
     });
 </script>
