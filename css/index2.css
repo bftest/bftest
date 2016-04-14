@@ -438,12 +438,32 @@
     float: left;
     width: 25%;
 }
-.fNav a img{
-    width: .49rem;
-    height: .46rem;
-    display: block;
+.fNav .foNav{
+    width: .54rem;
+    height: .48rem;
+    background-image: url(../images/ico/fI.png);
+    -webkit-background-size: .54rem 4rem;
+    -moz-background-size: .54rem 4rem;
+    -ms-background-size: .54rem 4rem;
+    -o-background-size: .54rem 4rem;
+    background-size: .54rem 4rem;
+    overflow: hidden;
     margin: 0 auto;
 }
+.fNav .fh{
+    background-position-y: 0rem;
+}
+
+.fNav .fc{
+    background-position-y: 6.5rem;
+}
+.fNav .fCart{
+    background-position-y: 9.5rem;
+}
+.fNav .fp{
+    background-position-y: 12.5rem;
+}
+
 .fNav p{
     font-size: .18rem;
     color: #999;
