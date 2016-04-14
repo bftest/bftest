@@ -19,6 +19,13 @@
         $(function () {
             FastClick.attach(document.body);
         });
+        window.onload=function(){
+            $(".goodsChangeImg .swiper-slide img").each(function(){
+                var $marT=-$(this).height()/2+"px";
+                $(this).css({"position":"relative","top":"50%","margin-top":$marT});
+            });
+        }
+
     </script>
 </head>
 <body>
@@ -219,7 +226,7 @@
             loop:true,
             grabCursor: true,
             paginationClickable: true,
-            autoplay:3000,
+            autoplay:0,
             autoplayDisableOnInteraction:false,
             calculateHeight:true
         });
@@ -227,10 +234,7 @@
         $(".swiper-wrapper div").each(function(){
             $(this).css("display","block");
         });
-       $(".goodsChangeImg .swiper-slide img").each(function(){
-         var $marT=-$(this).height()/2+"px";
-         $(this).css({"position":"relative","top":"50%","margin-top":$marT});
-         });
+
     });
 </script>
 </body>
