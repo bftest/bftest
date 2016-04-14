@@ -70,9 +70,10 @@
                 <span>电子发票</span><span>个人发票</span><span id="cardC">单位发票</span>
             </p>
             <div class="carExtr">
-                <input type="text" placeholder="请输入发票抬头"/>
+                <input type="text" id="testIn" placeholder="请输入发票抬头"/>
             </div>
         </section>
+
     </section>
     <!--card end-->
     <!--card-->
@@ -119,6 +120,13 @@
     <a href="payBy.html">去付款</a>
 </section>
 <!--pay end-->
-
+<script>
+    $("#testIn").focus(function(){
+        $(".pay").css({"position":"static"});
+    });
+    $("#testIn").onblur(function(){
+        $(".pay").css({"position":"fixed"});
+    });
+</script>
 </body>
 </html>
