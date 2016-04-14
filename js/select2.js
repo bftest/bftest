@@ -276,7 +276,7 @@ the specific language governing permissions and limitations under the Apache Lic
             offset = el.selectionStart;
             length = el.selectionEnd - offset;
         } else if ('selection' in document) {
-           el.focus();
+            el.focus();
             var sel = document.selection.createRange();
             length = document.selection.createRange().text.length;
             sel.moveStart('character', -el.value.length);
@@ -742,10 +742,10 @@ the specific language governing permissions and limitations under the Apache Lic
 
             this.dropdown.addClass(evaluate(opts.dropdownCssClass, this.opts.element));
             this.dropdown.data("select2", this);
-           this.dropdown.on("click", killEvent);
+            this.dropdown.on("click", killEvent);
 
             this.results = results = this.container.find(resultsSelector);
-           this.search = search = this.container.find("input.select2-input");
+            this.search = search = this.container.find("input.select2-input");
 
             this.queryCount = 0;
             this.resultsPage = 0;
@@ -800,12 +800,11 @@ the specific language governing permissions and limitations under the Apache Lic
             search.on("keyup-change input paste", this.bind(this.updateResults));
             search.on("focus", function () { search.addClass("select2-focused"); });
             search.on("blur", function () { search.removeClass("select2-focused");});
+
             this.dropdown.on("mouseup", resultsSelector, this.bind(function (e) {
                 if ($(e.target).closest(".select2-result-selectable").length > 0) {
                     this.highlightUnderEvent(e);
                     this.selectHighlighted(e);
-                    $("input").blur();
-                    $(".select2-input").blur();
                 }
             }));
 
@@ -813,9 +812,7 @@ the specific language governing permissions and limitations under the Apache Lic
             // for mouse events outside of itself so it can close itself. since the dropdown is now outside the select2's
             // dom it will trigger the popup close, which is not what we want
             // focusin can cause focus wars between modals and select2 since the dropdown is outside the modal.
-            this.dropdown.on("click mouseup mousedown touchstart touchend focusin", function (e) { e.stopPropagation();
-                $("input").blur();
-                $(".select2-input").blur();});
+            this.dropdown.on("click mouseup mousedown touchstart touchend focusin", function (e) { e.stopPropagation(); });
 
             this.nextSearchTerm = undefined;
 
@@ -1999,7 +1996,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 this.search.val(this.focusser.val());
             }
             if (this.opts.shouldFocusInput(this)) {
-               // this.search.focus();
+                this.search.focus();
                 // move the cursor to the end after focussing, otherwise it will be at the beginning and
                 // new text will appear *before* focusser.val()
                 el = this.search.get(0);
@@ -2698,6 +2695,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 _this.search[0].focus();
                 _this.selectChoice($(this));
             });
+
             // rewrite labels from original element to focusser
             this.search.attr("id", "s2id_autogen"+nextUid());
 
