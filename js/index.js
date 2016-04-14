@@ -95,9 +95,9 @@ $(function(){
         var $viewHeight= $(window).height();//浏览器可视化窗口的大小
         var top=parseInt($scrollTop)+parseInt($viewHeight)-217;
         if($scrollTop>$viewHeight-300){
-            $("#returnTop").show(100);
+            $("#returnTop").show();
         }else{
-            $("#returnTop").hide(100);
+            $("#returnTop").hide();
         }
     })
 
