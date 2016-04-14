@@ -119,5 +119,11 @@
     <a href="payBy.html">去付款</a>
 </section>
 <!--pay end-->
+<script>
+    var $topHeight=$(".top").height();
+    var $viewHeight= $(window).height();
+    var $top=($viewHeight-$topHeight)+"px";
+    $(".pay").css({"top":$top})
+</script>
 </body>
 </html>
