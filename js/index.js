@@ -24,13 +24,12 @@ $(function(){
             $(this).hasClass("selected") ? $(this).removeClass("selected").parent().siblings().hide():($(this).is("[id]") ? $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().show(): $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().hide());
         })
     });
- /*   $(".carT span").on("click",function(){
-        if($(this).hasClass("selected")){
-            $(this).removeClass("selected").parent().siblings().hide();
-        }else{
-            $(this).is("[id]") ? $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().show(): $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().hide();
-        }
-    });*/
+    $("#testIn,#textC").focus(function(){
+        $(".pay").css({"position":"static"});
+    });
+    $("#testIn,#textC").blur(function(){
+        $(".pay").css({"position":"fixed"});
+    });
     //
     function buyNum(){
         var $increment= $(".increment");

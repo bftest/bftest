@@ -276,7 +276,7 @@ the specific language governing permissions and limitations under the Apache Lic
             offset = el.selectionStart;
             length = el.selectionEnd - offset;
         } else if ('selection' in document) {
-            el.focus();
+           el.focus();
             var sel = document.selection.createRange();
             length = document.selection.createRange().text.length;
             sel.moveStart('character', -el.value.length);
@@ -800,7 +800,6 @@ the specific language governing permissions and limitations under the Apache Lic
             search.on("keyup-change input paste", this.bind(this.updateResults));
             search.on("focus", function () { search.addClass("select2-focused"); });
             search.on("blur", function () { search.removeClass("select2-focused");});
-
             this.dropdown.on("mouseup", resultsSelector, this.bind(function (e) {
                 if ($(e.target).closest(".select2-result-selectable").length > 0) {
                     this.highlightUnderEvent(e);
@@ -1996,7 +1995,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 this.search.val(this.focusser.val());
             }
             if (this.opts.shouldFocusInput(this)) {
-                this.search.focus();
+                //this.search.focus();
                 // move the cursor to the end after focussing, otherwise it will be at the beginning and
                 // new text will appear *before* focusser.val()
                 el = this.search.get(0);
