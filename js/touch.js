@@ -48,7 +48,7 @@ var slider = {
             }else{
                 index = (index==len-1?len-1:index+1);//需要判断是否是最后一张
             }
-            that.inner.style.webkitTransform = "translate("+(-this.offsetWidth*index)+"px,0)";
+           that.inner.style.webkitTransform = "translate("+(-this.offsetWidth*index)+"px,0)";
             that.inner.style.webkitTransition = "0.5s ease-out";
             that.inner.addEventListener("webkitTransitionEnd",function(){
                 this.style.webkitTransition = "";

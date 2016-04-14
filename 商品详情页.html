@@ -30,18 +30,24 @@
 <!--goodsChange-->
 <section class="goodsChange">
     <!---->
-    <div id="outer">
-        <ul id="inner">
-            <li><img src="images/pp.png"/></li>
-            <li><img src="images/pp2.png"/></li>
-            <li><img src="images/product.png"/></li>
-            <li><img src="images/pp2.png"/></li>
-            <li><img src="images/product.png"/></li>
-        </ul>
-        <ul id="item"></ul>
+    <div class="choose_tasks goodsChangeImgs">
+        <div class="swiper-container" style="cursor: -webkit-grab;">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide swiper-slide1">
+                    <img src="images/pp.png"/>
+                </li>
+                <li class="swiper-slide swiper-slide1">
+                    <img src="images/pp2.png"/>
+                </li>
+                <li class="swiper-slide swiper-slide1 swiper-slide-visible swiper-slide-active">
+                    <img src="images/product.png"/>
+                </li>
+            </ul>
+            <div class="pagination"><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span></div>
+        </div>
     </div>
     <!---->
-    <div class="goodsInfo">
+    <div class="goodsInfo goodsInfoC">
         <h3>暴风超体电视B系列  玫瑰金设计</h3>
         <p>4899.00<i>&nbsp;元起</i></p>
     </div>
@@ -202,6 +208,28 @@
     </div>
 </div>
 <!--tagLayer end-->
-<script src="js/touch.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+<script type="text/javascript">
+    //swiper轮播插件初始化
+    $(document).ready(function(){
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.pagination',
+            loop:false,
+            grabCursor: true,
+            paginationClickable: true,
+            autoplay:0,
+            autoplayDisableOnInteraction:false,
+            calculateHeight:true
+        });
+
+        $(".swiper-wrapper div").each(function(){
+            $(this).css("display","block");
+        });
+        $(".goodsChangeImgs .swiper-slide img").each(function(){
+            var $marT=-$(this).height()/2+"px";
+            $(this).css({"position":"relative","top":"50%","margin-top":$marT});
+        });
+    });
+</script>
 </body>
 </html>
