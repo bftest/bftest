@@ -38,10 +38,11 @@
 /*商品详情页样式*/
 /*.goodsChangeImg .choose_tasks .swiper-container{
     margin-bottom: .3rem;
-}
-.goodsChangeImg .swiper-container{
-    overflow: visible;
 }*/
+
+.goodsChangeImg .swiper-container .swiper-wrapper{
+    margin-bottom: .3rem;
+}
 .goodsChangeImg .swiper-slide img{
     width: 50%;
     margin: 0 auto;
@@ -64,10 +65,10 @@
 .goodsInfoC{
     margin-top: .5rem;
 }
-.goodsChangeImg  .swiper-container{
-    height: 220px;
+.pagination span:first-child{
+    margin-left: 0;
 }
-    /**/
+/**/
 .goodsInfo h3,.goodsInfo p{
     font-size: .36rem;
     padding: 0rem .3rem;
