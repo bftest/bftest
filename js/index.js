@@ -21,7 +21,7 @@ $(function(){
     $carTSpan.each(function(index){
         new FastClick($carTSpan[index]);
         $(this).on("click",function(){
-            $(this).hasClass("selected") ? $(this).removeClass("selected").parent().siblings().hide():($(this).is("[id]") ? $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().show().children("input").focus(): $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().hide());
+            $(this).hasClass("selected") ? $(this).removeClass("selected").parent().siblings().hide():($(this).is("[id]") ? $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().show(): $(this).addClass("selected").siblings().removeClass("selected").parent().siblings().hide());
         })
     });
  /*   $(".carT span").on("click",function(){
