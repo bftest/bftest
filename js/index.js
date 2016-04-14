@@ -86,12 +86,20 @@ $(function(){
         });
     });
 
-
-
-
-
-
-
+//回到页面顶部
+    $("#returnTop").click(function(){
+        $('body,html').animate({scrollTop:0},1500); //点击按钮让其回到页面顶部
+    });
+    $(window).scroll(function() {
+        var $scrollTop=$(document).scrollTop(); //滚动条距顶端的距离
+        var $viewHeight= $(window).height();//浏览器可视化窗口的大小
+        var top=parseInt($scrollTop)+parseInt($viewHeight)-217;
+        if($scrollTop>$viewHeight-217){
+            $("#returnTop").show(300);
+        }else{
+            $("#returnTop").hide(300);
+        }
+    })
 
 
 
