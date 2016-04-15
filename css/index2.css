@@ -238,12 +238,7 @@
 }
 /*tagLayer*/
 .tagLayerBox{
-    /*position: absolute;
-    left: 0;
-    top: 15%;
-    right: 0;
-    bottom: 0;
-    display: block;*/
+    display: none;
 }
 #tagHeader {
     position:absolute; z-index:2;
