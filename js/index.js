@@ -69,12 +69,15 @@ $(function(){
     });
     $(".selectedTag").on("click",function(){
         $(".tagLayer").show();
+        $("html,body").addClass("ovfHiden");
     });
     $("#btnSure").click(function(){
         $(".tagLayer").hide();
+        $("html,body").removeClass("ovfHiden");
     });
     $(".closed .close").on("click",function(){
         $(".tagLayer").hide();
+        $("html,body").removeClass("ovfHiden");
     });
     //
     var $befTar=$(".manageAd li .befTar");
