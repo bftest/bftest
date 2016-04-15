@@ -60,7 +60,7 @@ $(function(){
     }
     buyNum();
     //
-    var $tagBli = $(".tagBox dl li");
+    var $tagBli = $(".tagBoxC dl li");
     $tagBli.each(function(index){
         new FastClick($tagBli[index]);
         $(this).on("click",function(){
@@ -78,10 +78,6 @@ $(function(){
     $(".closed .close").on("click",function(){
         $(".tagLayer").hide();
         $("html,body").removeClass("ovfHiden");
-    });
-    $(".tagLayer").scroll(function(){
-        event.stopPropagation();
-        $("html,body").addClass("ovfHiden");
     });
     //
     var $befTar=$(".manageAd li .befTar");
