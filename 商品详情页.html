@@ -26,17 +26,19 @@
                 $(this).css({"position":"relative","top":"50%","margin-top":$marT});
             });
         };
-        $(".selectedTag").click(function(){
+    </script>
+    <script>
+        if($(".selectedTag").css("display")=="none"){
+            console.log(1);
+        }else{
             var myScroll;
-             function loaded() {
-             myScroll = new iScroll('wrapper');
-             }
-             document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-             document.addEventListener('DOMContentLoaded', loaded, false);
+            function loaded() {
+                myScroll = new iScroll('wrapper');
+            }
+            document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+            document.addEventListener('DOMContentLoaded', loaded, false);
             $(".tagLayerBox").show();
-
-        });
-
+        }
     </script>
 </head>
 <body>
