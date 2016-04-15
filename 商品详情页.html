@@ -26,12 +26,16 @@
                 $(this).css({"position":"relative","top":"50%","margin-top":$marT});
             });
         };
-        /*var myScroll;
-        function loaded() {
-            myScroll = new iScroll('wrapper');
-        }
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-        document.addEventListener('DOMContentLoaded', loaded, false);*/
+        $(".selectedTag").click(function(){
+            var myScroll;
+             function loaded() {
+             myScroll = new iScroll('wrapper');
+             }
+             document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+             document.addEventListener('DOMContentLoaded', loaded, false);
+            $(".tagLayerBox").show();
+
+        });
 
     </script>
 </head>
