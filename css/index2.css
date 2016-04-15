@@ -238,16 +238,16 @@
 }
 /*tagLayer*/
 .tagLayerBox{
-    position: absolute;
+    /*position: absolute;
     left: 0;
     top: 15%;
     right: 0;
     bottom: 0;
-    display: block;
+    display: block;*/
 }
 #tagHeader {
     position:absolute; z-index:2;
-    top:10px; left:0;
+    top:80px; left:0;
     width:100%;
     height:45px;
     padding:0;
@@ -262,7 +262,7 @@
 }
 #wrapper {
     position:absolute; z-index:1;
-    top:45px; bottom:48px; left:0; right: 0;
+    top:125px; bottom:48px; left:0; right: 0;
     width:100%;
     overflow:auto;
     background: #fff;
