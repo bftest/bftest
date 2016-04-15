@@ -256,7 +256,7 @@
     padding:0;
 }
 #wrapper {
-    position:absolute; z-index:1;
+    position:fixed; z-index:1;
     top:125px; bottom:48px; left:0; right: 0;
     width:100%;
     overflow:auto;
