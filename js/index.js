@@ -79,6 +79,10 @@ $(function(){
         $(".tagLayer").hide();
         $("html,body").removeClass("ovfHiden");
     });
+    $(".tagLayer").scroll(function(){
+        event.stopPropagation();
+        $("html,body").addClass("ovfHiden");
+    });
     //
     var $befTar=$(".manageAd li .befTar");
     $befTar.each(function(index){
