@@ -68,15 +68,15 @@ $(function(){
         })
     });
     $(".selectedTag").on("click",function(){
-        $(".tagLayer").show();
+        $(".tagLayerBox").show();
         $("html,body").addClass("ovfHiden");
     });
     $("#btnSure").click(function(){
-        $(".tagLayer").hide();
+        $(".tagLayerBox").hide();
         $("html,body").removeClass("ovfHiden");
     });
     $(".closed .close").on("click",function(){
-        $(".tagLayer").hide();
+        $(".tagLayerBox").hide();
         $("html,body").removeClass("ovfHiden");
     });
     //
