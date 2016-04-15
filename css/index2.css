@@ -245,7 +245,7 @@
     bottom: 0;
     display: block;*/
 }
-#tagHeader {
+/*#tagHeader {
     position:absolute; z-index:2;
     top:80px; left:0;
     width:100%;
@@ -370,7 +370,7 @@
     font-size: .32rem;
     clear: both;
 
-}
+}*/
 .returnTop{
     width: 1rem;
     height: 1rem;
