@@ -27,11 +27,20 @@
         }
 
     </script>
-    <style>
+    <script type="application/javascript" src="js/iscroll-lite.js"></script>
 
+    <script type="text/javascript">
 
+        var myScroll;
+        function loaded() {
+            myScroll = new iScroll('wrapper');
+        }
 
-    </style>
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+    </script>
 </head>
 <body>
 <!--top-->
