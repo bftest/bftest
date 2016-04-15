@@ -28,9 +28,7 @@
         };
     </script>
     <script>
-        if($(".tagLayerBox").css("display")=="none"){
-            console.log(1);
-        }else{
+        if($(".tagLayerBox").is(":hidden")){
             var myScroll;
             function loaded() {
                 myScroll = new iScroll('wrapper');
@@ -38,6 +36,8 @@
             document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
             document.addEventListener('DOMContentLoaded', loaded, false);
             $(".tagLayerBox").show();
+        }else{
+            console.log(1);
         }
     </script>
 </head>
